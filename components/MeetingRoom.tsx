@@ -6,7 +6,7 @@ type CallLayoutType = 'grid' | 'speaker-left' | 'spearker-right';
 
 const MeetingRoom = () => {
 
-  const [layout, setLayout] = useState<CallLayoutType>('speaker-left');
+  const [layout] = useState<CallLayoutType>('speaker-left');
   const [showParticipants, setShowParticipants] = useState(false);
 
   const CallLayout = () => {

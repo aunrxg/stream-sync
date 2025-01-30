@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image'
+// import Image from 'next/image'
 import React, { useState } from 'react'
 import HomeCard from './HomeCard'
 import { useRouter } from 'next/navigation'
@@ -15,7 +15,7 @@ const MeetingTypeList = () => {
 
   const { user } = useUser();
   const client = useStreamVideoClient();
-  const [values, setValues] = useState({
+  const [values] = useState({
     dateTime: new Date(),
     description: "",
     link: "",
@@ -49,6 +49,7 @@ const MeetingTypeList = () => {
       });
 
       setCallDetails(call);
+      console.log(callDetails);
       if(!values.description){
         router.push(`/meeting/${call.id}`)
       }
